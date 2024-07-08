@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+}
+
+.continear {
+    margin: 10px 5%;
+    padding: 0 5%;
+    text-align: center;
+}
+
+h1, h3 {
+    color: #eee;
+}
+
+.all-input {
+    margin: 20px 0;
+}
+
+.all-input .title,
+.count,
+.create,
+.search,
+.category {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.total-price {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.total {
+    background-color: rgb(192, 95, 95);
+    width: 100%;
+    max-width: 200px;
+    border-radius: 4px;
+    color: white;
+    height: 40px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.total::before{
+    content: 'Total:';
+}
+.price,
+.taxes,
+.discount,
+.ads {
+    width: calc(25% - 10px); 
+    margin-bottom: 10px;
+}
+
+.all-input input[type="text"] ,
+.all-input input[type="number"] {
+    height: 40px;
+    font-size: 20px;
+    padding: 7px 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(37, 37, 37);
+    border-radius: 4px;
+    caret-color: white;
+    color: white;
+    transition: 0.3s;
+}
+
+input:focus:not(input[type="button"]) {
+    transform: scale(1.1);
+}
+
+.create,
+.search-title,
+.search-category,
+.delete-all {
+    background-color: rgb(159, 115, 255);
+    color: white;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.delete-all{
+    display: none;
+}
+.create:hover,
+.search-title:hover,
+.search-category:hover,
+.delete-all:hover {
+    background-color: transparent;
+    border: 1px solid #eee;
+    color: #eee;
+}
+
+.search-title-category {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0 20px 0;
+}
+
+.search-title,
+.search-category {
+    padding: 6px;
+}
+
+.delete-all {
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+.table {
+    width: 100%;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.table table tr th,
+.table table tr td {
+    border: none;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+th {
+    background-color: rgb(159, 115, 255);
+    color: white;
+}
+
+td {
+    background-color: #eee;
+    color: rgb(159, 115, 255);
+}
+
+.update,
+.delete {
+    background-color: rgb(159, 115, 255);
+    color: white;
+    border: none;
+    outline: none;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.update:hover,
+.delete:hover {
+    background-color: transparent;
+    border: 1px solid rgb(159, 115, 255);
+    color: rgb(159, 115, 255);
+}
+
+
+@media (max-width: 768px) {
+    .continear {
+        margin: 10px 2%;
+        padding: 0 2%;
+    }
+
+    .price,
+    .taxes,
+    .discount,
+    .ads {
+        width: calc(50% - 10px);
+    }
+
+    .total {
+        max-width: 100%;
+    }
+
+    .table{
+        overflow-x:scroll;
+    }
+}
+
+@media (max-width: 480px) {
+    .continear {
+        margin: 10px 5px;
+        padding: 0 5px;
+    }
+
+    .price,
+    .taxes,
+    .discount,
+    .ads {
+        width: 100%;
+    }
+}
